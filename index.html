@@ -5,63 +5,259 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
+
     <style>
 
         @keyframes fadeDown {
 
             from {
-                opacity: 0;
-                transform: translateY(-50px);
+                opacity:0;
+                transform:translateY(-50px);
             }
 
             to {
-                opacity: 1;
-                transform: translateY(0px);
+                opacity:1;
+                transform:translateY(0);
             }
 
         }
 
 
-        body{
-            background-color:#bc8f8f;
+
+        @keyframes float {
+
+            0% {
+                transform:translateY(0px);
+            }
+
+            50% {
+                transform:translateY(-25px);
+            }
+
+            100% {
+                transform:translateY(0px);
+            }
+
         }
 
 
-        button{
+
+        body {
+
+            margin:0;
+            background-color: #5c3a3a;
+            font-family:Arial, sans-serif;
+            overflow-y:auto;
+            min-height:100vh;
+
+        }
+
+
+
+        .background-block {
+
+            position:fixed;
+            background:rgba(255,255,255,0.25);
+            border-radius:25px;
+            animation:float 6s ease-in-out infinite;
+            z-index:0;
+
+        }
+
+
+
+        .block1 {
+
+            width:180px;
+            height:180px;
+            top:40px;
+            left:50px;
+
+        }
+
+
+
+        .block2 {
+
+            width:120px;
+            height:120px;
+            top:220px;
+            right:70px;
+            animation-delay:1s;
+
+        }
+
+
+
+        .block3 {
+
+            width:220px;
+            height:220px;
+            bottom:40px;
+            left:120px;
+            animation-delay:2s;
+
+        }
+
+
+
+        .block4 {
+
+            width:90px;
+            height:90px;
+            bottom:180px;
+            right:180px;
+            animation-delay:3s;
+
+        }
+
+
+
+        .block5 {
+
+            width:150px;
+            height:150px;
+            top:420px;
+            left:45%;
+            animation-delay:4s;
+
+        }
+
+
+
+        .container {
+
+            position:relative;
+            z-index:1;
+            text-align:center;
+            padding-top:60px;
+
+        }
+
+
+
+        h1 {
+
+            font-size:78px;
+            color:white;
+            font-family:'Great Vibes', cursive;
+            animation:fadeDown 2s;
+            margin-bottom:20px;
+
+        }
+
+
+
+        button {
 
             background-color:white;
-
             color:#bc8f8f;
-
-            font-size:10px;
-
-            padding:10px 20px;
-
+            font-size:14px;
+            padding:12px 24px;
             margin:10px;
-
-            border:1px solid white;
-
-            border-radius:15px;
-
+            border:none;
+            border-radius:20px;
             cursor:pointer;
-
-            transition:0.1s;
+            transition:0.3s;
 
         }
 
 
-        button:hover{
+
+        button:hover {
 
             background-color:#f8d7da;
-
-            transform:scale(1);
+            transform:scale(1.08);
 
         }
 
 
-        a{
+
+        a {
+
             text-decoration:none;
+
         }
+
+
+
+        /* ABOUT SECTION */
+
+
+        .about {
+
+            margin-top:40px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:80px;
+            padding:40px;
+            flex-wrap:wrap;
+
+        }
+
+
+
+        .profile {
+
+            text-align:center;
+            color:white;
+
+        }
+
+
+
+        .profile img {
+
+            width:300px;
+            height:350px;
+            border-radius:20px;
+            object-fit:cover;
+
+        }
+
+
+
+        .profile h2 {
+
+            font-size:35px;
+            font-family:'Great Vibes', cursive;
+            margin-top:20px;
+
+        }
+
+
+
+        .contact-info {
+
+            color:white;
+            font-size:16px;
+            line-height:1.5;
+
+        }
+
+
+
+        .about-text {
+
+            max-width:500px;
+            color:white;
+            font-size:18px;
+            line-height:1.6;
+            text-align:left;
+
+        }
+
+
+
+        .about-text h2 {
+
+            font-size:55px;
+            font-family:'Great Vibes', cursive;
+            text-align:center;
+
+        }
+
 
 
     </style>
@@ -69,20 +265,30 @@
 </head>
 
 
+
 <body>
 
-<center>
 
-    <h1 style="
-        font-size:78px;
-        color:white;
-        font-family:'Great Vibes', cursive;
-        animation:fadeDown 2s;
-        margin-top:50px;
-        margin-bottom: 20px;
-    ">
-        Welcome to Nails By Maya
-    </h1>
+<div class="background-block block1"></div>
+
+<div class="background-block block2"></div>
+
+<div class="background-block block3"></div>
+
+<div class="background-block block4"></div>
+
+<div class="background-block block5"></div>
+
+
+
+
+<div class="container">
+
+
+
+    <h1>Welcome to Nails By Maya</h1>
+
+
 
 
     <a href="index.html">
@@ -105,15 +311,84 @@
     </a>
 
 
-    <a href="contact.html">
-        <button>Contact</button>
-    </a>
-
-
-    <br><br>
 
 
 
-</center>
+    <section class="about">
+
+
+        <div class="profile">
+
+
+            <img src="nail_image/maya.jpeg">
+
+            <h2>Thanmaya K. Anoop</h2>
+
+
+
+            <div class="contact-info">
+
+                <p><strong>Phone:</strong> 704-964-9660</p>
+
+                <p><strong>Email:</strong> thanmayakanoop2010@gmail.com</p>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="about-text">
+
+
+            <h2>About Me</h2>
+
+
+            <p>
+                My name is Thanmaya K. Anoop, and I am a high school student
+                with a passion for creativity, technology, and entrepreneurship.
+                Inspired by the dedication and creativity of others, I started
+                my own nail business, Nails By Maya, as a way to express my
+                artistic abilities and share my passion for nail design with
+                others.
+            </p>
+
+
+
+            <p>
+                Through this journey, I have learned the importance of creativity,
+                attention to detail, and creating meaningful experiences for
+                others. Along with my passion for nail art, I have developed a
+                strong interest in computer science and web development.
+            </p>
+
+
+
+            <p>
+                I decided to create this website as a way to combine my creativity,
+                technical skills, and entrepreneurial goals into one platform.
+                Nails By Maya represents my journey of learning, growing, and
+                bringing my passions in art, business, and technology together.
+            </p>
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+</div>
+
+
 
 </body>
+
